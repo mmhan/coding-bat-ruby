@@ -5,6 +5,13 @@ class String1Example
 end
 
 describe String1Example do
+	describe ".hello_name" do
+		it "should greet the name" do
+			expect(described_class.hello_name "Mike").to eq("Hello Mike!")
+			expect(described_class.hello_name "Rachel").to eq("Hello Rachel!")
+			expect(described_class.hello_name "Sally").to eq("Hello Sally!")
+		end
+	end
 	describe ".make_abba" do
 		it "should combine two strings as abba" do
 			expect(described_class.make_abba "a", "b").to eq("abba")
