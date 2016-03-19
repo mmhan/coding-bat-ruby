@@ -94,4 +94,13 @@ describe String1Example do
 			expect(described_class.non_start "shotl", "java").to eq("hotlava")
 		end
 	end
+
+	describe ".left2" do
+		it "returns rotated left 2 version of the string" do
+			expect(described_class.left2 "Hello").to eq("lloHe")
+			expect(described_class.left2 "java").to eq("vaja")
+			expect(described_class.left2 "Hi").to eq("Hi")
+			expect(described_class.left2 "Sat").to eq("tSa")
+		end
+	end
 end

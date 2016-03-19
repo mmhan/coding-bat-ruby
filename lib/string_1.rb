@@ -134,4 +134,16 @@ module String1
 	def non_start(first, second)
 		first[1..first.length - 1] + second[1..second.length - 1]
 	end
+
+
+	# Given a string, return a "rotated left 2" version where the first 2 chars
+	# are moved to the end. The string length will be at least 2.
+	#
+	# Examples:
+	# left2('Hello') → 'lloHe'
+	# left2('java') → 'vaja'
+	# left2('Hi') → 'Hi'
+	def left2(str)
+		str[2..str.length - 1] + str[0..1]
+	end
 end
