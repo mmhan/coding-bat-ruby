@@ -19,4 +19,12 @@ describe String1Example do
 			expect(described_class.make_abba "What", "Up").to eq("WhatUpUpWhat")
 		end
 	end
+
+	describe ".make_tags" do
+		it "should make html tags with given content" do
+			expect(described_class.make_tags "i", "Yay").to eq("<i>Yay</i>")
+			expect(described_class.make_tags "i", "Hello").to eq("<i>Hello</i>")
+			expect(described_class.make_tags "cite", "Yay").to eq("<cite>Yay</cite>")
+		end
+	end
 end
