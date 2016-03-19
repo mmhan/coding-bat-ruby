@@ -87,4 +87,11 @@ describe String1Example do
 		end
 	end
 
+	describe ".non_start" do
+		it "returns concatenation of two strings omitting first char" do
+			expect(described_class.non_start "Hello", "There").to eq("ellohere")
+			expect(described_class.non_start "Hello", "World").to eq("elloorld")
+			expect(described_class.non_start "shotl", "java").to eq("hotlava")
+		end
+	end
 end
