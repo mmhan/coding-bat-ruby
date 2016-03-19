@@ -35,4 +35,11 @@ describe String1Example do
 			expect(described_class.make_out_word '[[]]', 'word').to eq('[[word]]')
 		end
 	end
+
+	describe ".extra_end" do
+		it "should return 3 copies of the last two chars" do
+			expect(described_class.extra_end "ab").to eq("ababab")
+			expect(described_class.extra_end "Hi").to eq("HiHiHi")
+		end
+	end
 end
