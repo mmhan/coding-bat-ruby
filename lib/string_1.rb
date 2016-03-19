@@ -99,4 +99,25 @@ module String1
 	def without_end(str)
 		str[1..(str.length - 2)]
 	end
+
+
+	# Given 2 strings, a and b, return a string of the form short+long+short, with the shorter string on the outside and the longer string on the inside. The strings will not be the same length, but they may be empty (length 0). 
+	#
+	# Examples:
+	# combo_string('Hello', 'hi') → 'hiHellohi'
+	# combo_string('hi', 'Hello') → 'hiHellohi'
+	# combo_string('aaa', 'b') → 'baaab'
+	def combo_string(str_a, str_b)
+		return nil if str_a.length == str_b.length
+
+		if str_a.length > str_b.length
+			longer = str_a
+			shorter = str_b
+		else
+			longer = str_b
+			shorter = str_a
+		end
+
+		shorter + longer + shorter
+	end
 end

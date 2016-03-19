@@ -75,4 +75,16 @@ describe String1Example do
 		end
 	end
 
+	describe ".combo_string" do
+		it "should wrap longer string with shorter string" do
+			expect(described_class.combo_string "Hello", "hi").to eq("hiHellohi")
+			expect(described_class.combo_string "hi", "Hello").to eq("hiHellohi")
+			expect(described_class.combo_string "aaa", "b").to eq("baaab")
+		end
+
+		it "won't choke with equal length strings" do
+			expect(described_class.combo_string "a", "b").to be_nil
+		end
+	end
+
 end
