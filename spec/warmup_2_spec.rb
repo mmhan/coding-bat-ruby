@@ -66,4 +66,12 @@ describe Warmup2Example do
 			expect(described_class.array_front9 [9]).to eq(true)
 		end
 	end
+
+	describe ".array123" do
+		it "is true when 1, 2, 3 as sequence is found in the array" do
+			expect(described_class.array123 [1, 1, 2, 3, 1]).to eq(true)
+			expect(described_class.array123 [1, 1, 2, 4, 1]).to eq(false)
+			expect(described_class.array123 [1, 1, 2, 1, 2, 3]).to eq(true)
+		end
+	end
 end
