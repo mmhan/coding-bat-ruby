@@ -73,4 +73,16 @@ module String1
 	def first_two(str)
 		str[0..1]
 	end
+
+
+	# Given a string, return a version without the first and last char, so
+	# "Hello" yields "ell". The string length will be at least 2.
+	#
+	# Examples:
+	# without_end('Hello') → 'ell'
+	# without_end('java') → 'av'
+	# without_end('coding') → 'odin'
+	def without_end(str)
+		str[1..(str.length - 2)]
+	end
 end

@@ -54,4 +54,12 @@ describe String1Example do
 			expect(described_class.first_two "").to eq("")
 		end
 	end
+
+	describe ".without_end" do
+		it "should return without first/ending chars" do
+			expect(described_class.without_end "Hello").to eq("ell")
+			expect(described_class.without_end "java").to eq("av")
+			expect(described_class.without_end "coding").to eq("odin")
+		end
+	end
 end
