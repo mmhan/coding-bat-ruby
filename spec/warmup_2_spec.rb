@@ -74,4 +74,16 @@ describe Warmup2Example do
 			expect(described_class.array123 [1, 1, 2, 1, 2, 3]).to eq(true)
 		end
 	end
+
+	describe ".string_match" do
+		it "matches two strings and count them " do
+			expect(described_class.string_match 'xxcaazz', 'xxbaaz').to eq(3)
+			expect(described_class.string_match 'abc', 'abc').to eq(2)
+			expect(described_class.string_match 'abc', 'axc').to eq(0)
+		end
+
+		it "will count nothing if string length is shorter than 2" do
+			expect(described_class.string_match 'a', 'axc').to eq(0)
+		end
+	end
 end
