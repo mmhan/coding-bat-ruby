@@ -27,4 +27,12 @@ describe String1Example do
 			expect(described_class.make_tags "cite", "Yay").to eq("<cite>Yay</cite>")
 		end
 	end
+
+	describe ".make_out_word" do
+		it "should make out words" do
+			expect(described_class.make_out_word '<<>>', 'Yay').to eq('<<Yay>>')
+			expect(described_class.make_out_word '<<>>', 'WooHoo').to eq('<<WooHoo>>')
+			expect(described_class.make_out_word '[[]]', 'word').to eq('[[word]]')
+		end
+	end
 end
