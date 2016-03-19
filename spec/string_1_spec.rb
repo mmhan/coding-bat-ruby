@@ -55,6 +55,18 @@ describe String1Example do
 		end
 	end
 
+	describe ".first_half" do
+		it "should return the first half of even length string" do
+			expect(described_class.first_half "WooHoo").to eq("Woo")
+			expect(described_class.first_half "HelloThere").to eq("Hello")
+			expect(described_class.first_half "abcdef").to eq("abc")
+		end
+		it "should return nil for odd-length string" do
+			expect(described_class.first_half "a").to eq(nil)
+			expect(described_class.first_half "abc").to eq(nil)
+		end
+	end
+
 	describe ".without_end" do
 		it "should return without first/ending chars" do
 			expect(described_class.without_end "Hello").to eq("ell")
@@ -62,4 +74,5 @@ describe String1Example do
 			expect(described_class.without_end "coding").to eq("odin")
 		end
 	end
+
 end

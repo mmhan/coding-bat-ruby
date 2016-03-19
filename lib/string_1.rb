@@ -75,6 +75,20 @@ module String1
 	end
 
 
+	# Given a string of even length, return the first half. So the string
+	# "WooHoo" yields "Woo".
+	#
+	# Example:
+	# first_half('WooHoo') → 'Woo'
+	# first_half('HelloThere') → 'Hello'
+	# first_half('abcdef') → 'abc'
+	def first_half(str)
+		return nil if str.length % 2 != 0
+
+		end_of_result = (str.length / 2) - 1
+		str[0..end_of_result]
+	end
+
 	# Given a string, return a version without the first and last char, so
 	# "Hello" yields "ell". The string length will be at least 2.
 	#
