@@ -47,4 +47,12 @@ describe Warmup2Example do
 			expect(described_class.last2("xxx")).to eq(1)
 		end
 	end
+
+	describe ".array_count9" do
+		it "counts the number of 9 in an array" do
+			expect(described_class.array_count9([1, 2, 3, 9])).to eq(1)
+			expect(described_class.array_count9([9, 0, 9, 1])).to eq(2)
+			expect(described_class.array_count9([9, 9, 9])).to eq(3)
+		end
+	end
 end
