@@ -83,4 +83,20 @@ module Warmup2
 	def array_count9(arr)
 		arr.count { |n| n == 9 }
 	end
+
+	# Given an array of ints, return True if one of the first 4 elements in the
+	# array is a 9. The array length may be less than 4.
+	#
+	# Examples:
+	# array_front9([1, 2, 9, 3, 4]) → True
+	# array_front9([1, 2, 3, 4, 9]) → False
+	# array_front9([1, 2, 3, 4, 5]) → False
+	def array_front9(arr)
+		i = 0
+		arr.any? do |n|
+			tally = n == 9 && i <= 3
+			i+= 1
+			tally
+		end
+	end
 end

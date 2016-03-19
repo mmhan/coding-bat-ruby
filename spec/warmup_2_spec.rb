@@ -55,4 +55,15 @@ describe Warmup2Example do
 			expect(described_class.array_count9([9, 9, 9])).to eq(3)
 		end
 	end
+
+	describe ".array_front9" do
+		it "check if the front (up to 4) of the array contains 9" do
+			expect(described_class.array_front9 [1,2,3,9]).to eq(true)
+			expect(described_class.array_front9 [9,2,3,4,9]).to eq(true)
+			expect(described_class.array_front9 [1,2,3,4,9]).to eq(false)
+			expect(described_class.array_front9 [1,2,3,4,5]).to eq(false)
+			expect(described_class.array_front9 [1]).to eq(false)
+			expect(described_class.array_front9 [9]).to eq(true)
+		end
+	end
 end
