@@ -59,4 +59,18 @@ module String1
 	def extra_end(str)
 		str[-2..-1] * 3
 	end
+
+
+	# Given a string, return the string made of its first two chars, so the
+	# String "Hello" yields "He". If the string is shorter than length 2, return
+	# whatever there is, so "X" yields "X", and the empty string "" yields the
+	# empty string "".
+	#
+	# Example:
+	# first_two('Hello') → 'He'
+	# first_two('abcdefg') → 'ab'
+	# first_two('ab') → 'ab'
+	def first_two(str)
+		str[0..1]
+	end
 end

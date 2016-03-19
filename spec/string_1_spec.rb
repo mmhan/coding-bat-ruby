@@ -42,4 +42,16 @@ describe String1Example do
 			expect(described_class.extra_end "Hi").to eq("HiHiHi")
 		end
 	end
+	describe ".first_two" do
+		it "should return the first two chars" do
+			expect(described_class.first_two "Abcd").to eq("Ab")
+			expect(described_class.first_two "abcdefg").to eq("ab")
+			expect(described_class.first_two "ab").to eq("ab")
+		end
+
+		it "doesn't choke if string of length less than 2 is given" do
+			expect(described_class.first_two "a").to eq("a")
+			expect(described_class.first_two "").to eq("")
+		end
+	end
 end
