@@ -44,6 +44,7 @@ describe Warmup2Example do
 			expect(described_class.last2("xaxxaxaxx")).to eq(1)
 			expect(described_class.last2("axxxaaxx")).to eq(2)
 			expect(described_class.last2("aaaaaaxx")).to eq(0)
+			expect(described_class.last2("xxx")).to eq(1)
 		end
 	end
 end

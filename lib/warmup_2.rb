@@ -64,11 +64,13 @@ module Warmup2
 	# last2('xaxxaxaxx') → 1
 	# last2('axxxaaxx') → 2
 	def last2(str)
+		return 0 if str.length < 2
+
 		match = str[-2..-1]
 		result = 0
-		(0..(str.length - 1)).each do |i|
+		(0..(str.length - 3)).each do |i|
 			result += 1 if match == str[i..i+1]
 		end
-		result - 1
+		result
 	end
 end
